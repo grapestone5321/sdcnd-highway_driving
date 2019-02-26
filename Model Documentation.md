@@ -2,14 +2,9 @@
 # Path-Planning-Project
 
 ## Introduction
-The goal of this project is to build a path planner that creates smooth, safe trajectories for the car to follow. The highway track has other vehicles, all going different speeds, but approximately obeying the 50 MPH speed limit.
+The goal of this project is to build a path planner that creates smooth, safe trajectories for the car to follow. The highway track has other vehicles, all going different speeds, but approximately obeying the 50 MPH speed limit. The car transmits its location, along with its sensor fusion data, which estimates the location of all the vehicles on the same side of the road.
 
-The car transmits its location, along with its sensor fusion data, which estimates the location of all the vehicles on the same side of the road.
-
-
-
-
-### Goals
+#### Goals
 In this project the goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. 
 - The car's localization and sensor fusion data will be provided, and there is also a sparse map list of waypoints around the highway. 
 - The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. 
