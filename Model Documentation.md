@@ -35,12 +35,6 @@ The track is 6945.554 meters around (about 4.32 miles). If the car averages near
 
 The highway has 6 lanes total - 3 heading in each direction. Each lane is 4 m wide and the car should only ever be in one of the 3 lanes on the right-hand side. The car should always be inside a lane unless doing a lane change.
 
-#### The map of the highway is in data/highway_map.txt
-Each waypoint in the list contains  [x,y,s,dx,dy] values. x and y are the waypoint's map coordinate position, the s value is the distance along the road to get to that waypoint in meters, the dx and dy values define the unit normal vector pointing outward of the highway loop.
-
-The highway's waypoints loop around so the frenet s value, distance along the road, goes from 0 to 6945.554.
-
-
 #### Waypoint Data
 Each waypoint has an (x,y) global map position, and a Frenet s value and Frenet d unit normal vector (split up into the x component, and the y component).
 
@@ -62,8 +56,8 @@ There are also other methods you could use. For example, Bezier curve fitting wi
 
 Here is a great and easy to setup and use spline tool for C++, contained in just a single header file.
 
-#### Tips
-A really helpful resource for doing this project and creating smooth trajectories was using http://kluge.in-chemnitz.de/opensource/spline/, the spline function is in a single hearder file is really easy to use.
+#### Spline function
+A really helpful resource for creating smooth trajectories was using the spline function, and it is in a single hearder file is really easy to use.
 
 
 ## Sensor Fusion
