@@ -54,10 +54,7 @@ In previous lessons we looked at fitting polynomials to waypoints. Once you have
 
 There are also other methods you could use. For example, Bezier curve fitting with control points, or spline fitting, which guarantees that the generated function passes through every point.
 
-Here is a great and easy to setup and use spline tool for C++, contained in just a single header file.
-
-#### Spline function
-A really helpful resource for creating smooth trajectories was using the spline function, and it is in a single hearder file is really easy to use.
+Here is a great and easy to setup and use spline tool for C++, contained in just a single header file. A really helpful resource for creating smooth trajectories was using the spline function, and it is really easy to use.
 
 
 ## Sensor Fusion
