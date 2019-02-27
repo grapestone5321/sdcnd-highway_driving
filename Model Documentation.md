@@ -16,17 +16,6 @@ The animation above shows how the car moves and rotates through a given list of 
 #### Velocity
 The velocity of the car depends on the spacing of the points. Because the car moves to a new waypoint every 20ms, the larger the spacing between points, the faster the car will travel. The speed goal is to have the car traveling at (but not above) the 50 MPH speed limit as often as possible. But there will be times when traffic gets in the way.
 
-#### Goals
-In this project the goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. 
-- The car's localization and sensor fusion data will be provided, and there is also a sparse map list of waypoints around the highway. 
-- The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. 
-- The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. 
-- The car should be able to make one complete loop around the 6946m highway. 
-- Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. 
-- Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
-
-
-
 
 ## Highway Map
 Inside data/highway_map.csv there is a list of waypoints that go all the way around the track. The track contains a total of 181 waypoints, with the last waypoint mapping back around to the first. The waypoints are in the middle of the double-yellow dividing line in the center of the highway.
@@ -76,5 +65,13 @@ For safety, a lane change path should optimize the distance away from other traf
 The provided Eigen-3.3 library can solve such linear equations. The getXY helper function can transform (s,d) points to (x,y) points for the returned path.
 
 
+## Results
+The car is safely navigated around a virtual highway with other traffic. 
+- The car's localization and sensor fusion data are provided, and there is also a sparse map list of waypoints around the highway. 
+- The car goes as close as possible to the 50 MPH speed limit. 
+- The car avoids hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. 
+- The car is able to make one complete loop around the 6946m highway. 
+- Since the car is trying to go 50 MPH, it takes a little over 5 minutes to complete 1 loop. 
+- Also the car does not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
 
 
