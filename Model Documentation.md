@@ -22,13 +22,7 @@ Each waypoint has an (x,y) global map position, and a Frenet s value and Frenet 
 We have included a helper function, getXY, which takes in Frenet (s,d) coordinates and transforms them to (x,y) coordinates.
 
 #### Interpolating Points
-If you need to estimate the location of points between the known waypoints, you will need to "interpolate" the position of those points.
-
-In previous lessons we looked at fitting polynomials to waypoints. Once you have a polynomial function, you can use it to interpolate the location of a new point.
-
-There are also other methods you could use. For example, Bezier curve fitting with control points, or spline fitting, which guarantees that the generated function passes through every point.
-
-Here is a great and easy to setup and use spline tool for C++, contained in just a single header file. A really helpful resource for creating smooth trajectories was using the spline function, and it is really easy to use.
+If you need to estimate the location of points between the known waypoints, you will need to "interpolate" the position of those points. Here is a great and easy to setup and use spline tool for C++, contained in just a single header file. A really helpful resource for creating smooth trajectories was using the spline function, and it is really easy to use.
 
 
 ## Sensor Fusion
