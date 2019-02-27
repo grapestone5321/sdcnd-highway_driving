@@ -7,11 +7,8 @@ The goal of this project is to build a path planner that creates smooth, safe tr
 #### Point Paths
 The path planner should output a list of x and y global map coordinates. Each pair of x and y coordinates is a point, and all of the points together form a trajectory. You can use any number of points that you want, but the x list should be the same length as the y list.
 
-Every 20 ms the car moves to the next point on the list. The car's new rotation becomes the line between the previous waypoint and the car's new location.
+Every 20 ms the car moves to the next point on the list. The car's new rotation becomes the line between the previous waypoint and the car's new location. The car moves from point to point perfectly, so you don't have to worry about building a controller for this project.
 
-The car moves from point to point perfectly, so you don't have to worry about building a controller for this project.
-
-The animation above shows how the car moves and rotates through a given list of points.
 
 #### Velocity
 The velocity of the car depends on the spacing of the points. Because the car moves to a new waypoint every 20ms, the larger the spacing between points, the faster the car will travel. The speed goal is to have the car traveling at (but not above) the 50 MPH speed limit as often as possible. But there will be times when traffic gets in the way.
