@@ -74,7 +74,7 @@ The last consideration is how to create paths that can smoothly changes lanes. A
 
 The car should only change lanes if such a change would be safe, and also if the lane change would help it move through the flow of traffic better.
 
-For safety, a lane change path should optimize the distance away from other traffic. For comfort, a lane change path should also result in low acceleration and jerk. The acceleration and jerk part can be solved from linear equations for s and d functions. Examples of this can be found in the Trajectory Generation quizzes entitled, "Quintic Polynomial Solver" and "Polynomial Trajectory".
+For safety, a lane change path should optimize the distance away from other traffic. For comfort, a lane change path should also result in low acceleration and jerk. The acceleration and jerk part can be solved from linear equations for s and d functions. 
 
 The provided Eigen-3.3 library can solve such linear equations. The getXY helper function can transform (s,d) points to (x,y) points for the returned path.
 
