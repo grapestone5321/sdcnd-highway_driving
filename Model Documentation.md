@@ -1,5 +1,5 @@
-# CarND-Path-Planning-Project
 # Reflection on how to generate paths
+### CarND-Path-Planning-Project
 
 ## Introduction
 The goal of this project is to build a path planner that creates smooth, safe trajectories for the car to follow. The highway track has other vehicles, all going different speeds, but approximately obeying the 50 MPH speed limit. The car transmits its location, along with its sensor fusion data, which estimates the location of all the vehicles on the same side of the road.
@@ -28,7 +28,7 @@ In this project the goal is to safely navigate around a virtual highway with oth
 
 
 
-### Highway Map
+## Highway Map
 Inside data/highway_map.csv there is a list of waypoints that go all the way around the track. The track contains a total of 181 waypoints, with the last waypoint mapping back around to the first. The waypoints are in the middle of the double-yellow dividing line in the center of the highway.
 
 The track is 6945.554 meters around (about 4.32 miles). If the car averages near 50 MPH, then it should take a little more than 5 minutes for it to go all the way around the highway.
@@ -41,7 +41,7 @@ Each waypoint in the list contains  [x,y,s,dx,dy] values. x and y are the waypoi
 The highway's waypoints loop around so the frenet s value, distance along the road, goes from 0 to 6945.554.
 
 
-### Waypoint Data
+#### Waypoint Data
 Each waypoint has an (x,y) global map position, and a Frenet s value and Frenet d unit normal vector (split up into the x component, and the y component).
 
 The s value is the distance along the direction of the road. The first waypoint has an s value of 0 because it is the starting point.
@@ -50,10 +50,10 @@ The d vector has a magnitude of 1 and points perpendicular to the road in the di
 
 If you would like to be in the middle lane, add the waypoint's coordinates to the d vector multiplied by 6 = (2+4), since the center of the middle lane is 4 m from the center of the left lane, which is itself 2 m from the double-yellow dividing line and the waypoints.
 
-### Converting Frenet Coordinates
+#### Converting Frenet Coordinates
 We have included a helper function, getXY, which takes in Frenet (s,d) coordinates and transforms them to (x,y) coordinates.
 
-### Interpolating Points
+#### Interpolating Points
 If you need to estimate the location of points between the known waypoints, you will need to "interpolate" the position of those points.
 
 In previous lessons we looked at fitting polynomials to waypoints. Once you have a polynomial function, you can use it to interpolate the location of a new point.
@@ -66,7 +66,7 @@ Here is a great and easy to setup and use spline tool for C++, contained in just
 A really helpful resource for doing this project and creating smooth trajectories was using http://kluge.in-chemnitz.de/opensource/spline/, the spline function is in a single hearder file is really easy to use.
 
 
-### Sensor Fusion
+## Sensor Fusion
 It's important that the car doesn't crash into any of the other vehicles on the road, all of which are moving at different speeds around the speed limit and can change lanes.
 
 The sensor_fusion variable contains all the information about the cars on the right-hand side of the road.
@@ -75,7 +75,7 @@ The data format for each car is: [ id, x, y, vx, vy, s, d]. The id is a unique i
 
 The vx, vy values can be useful for predicting where the cars will be in the future. For instance, if you were to assume that the tracked car kept moving along the road, then its future predicted Frenet s value will be its current s value plus its (transformed) total velocity (m/s) multiplied by the time elapsed into the future (s).
 
-### Changing Lanes
+## Changing Lanes
 The last consideration is how to create paths that can smoothly changes lanes. Any time the ego vehicle approaches a car in front of it that is moving slower than the speed limit, the ego vehicle should consider changing lanes.
 
 The car should only change lanes if such a change would be safe, and also if the lane change would help it move through the flow of traffic better.
