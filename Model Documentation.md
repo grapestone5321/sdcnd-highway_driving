@@ -13,11 +13,7 @@ The velocity of the car depends on the spacing of the points. Because the car mo
 
 ## Complex Paths
 #### Using Previous Path Points
-The code snippet above builds a 50 point path, as in the previous experiment. But this code snippet starts the new path with whatever previous path points were left over from the last cycle. Then we append new waypoints, until the new path has 50 total waypoints.
-
-Using information from the previous path ensures that there is a smooth transition from cycle to cycle. But the more waypoints we use from the previous path, the less the new path will reflect dynamic changes in the environment.
-
-Ideally, we might only use a few waypoints from the previous path and then generate the rest of the new path based on new data from the car's sensor fusion information.
+The code snippet builds a 50 point path. The code snippet starts the new path with whatever previous path points were left over from the last cycle. Then we append new waypoints, until the new path has 50 total waypoints. Using information from the previous path ensures that there is a smooth transition from cycle to cycle. But the more waypoints we use from the previous path, the less the new path will reflect dynamic changes in the environment. Ideally, we might only use a few waypoints from the previous path and then generate the rest of the new path based on new data from the car's sensor fusion information.
 
 #### Timing
 The simulator runs a cycle every 20 ms (50 frames per second), but your C++ path planning program will provide a new path at least one 20 ms cycle behind. The simulator will simply keep progressing down its last given path while it waits for a new generated path.
